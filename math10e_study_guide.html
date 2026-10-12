@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mathematics 10E (MYP 5 Extended) – Study Guide &amp; Practice Tests</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] }, svg: { fontCache: 'global' } };
+</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js"></script>
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#fbfaf7; --fg:#1f2430; --muted:#5d6577; --card:#ffffff; --border:#e2ded3;
+  --accent:#2f5d9e; --accent-soft:#e8f0fb; --good:#2d7a4f; --good-soft:#e6f4ec;
+  --warn:#9a5b00; --warn-soft:#fdf1dc; --code:#f1efe8;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15171c; --fg:#e6e8ee; --muted:#9aa3b5; --card:#1d2027; --border:#313644;
+    --accent:#7fb0ff; --accent-soft:#1f2b40; --good:#6fd09a; --good-soft:#18291f;
+    --warn:#f0b35a; --warn-soft:#322614; --code:#262a33;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15171c; --fg:#e6e8ee; --muted:#9aa3b5; --card:#1d2027; --border:#313644;
+  --accent:#7fb0ff; --accent-soft:#1f2b40; --good:#6fd09a; --good-soft:#18291f;
+  --warn:#f0b35a; --warn-soft:#322614; --code:#262a33;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;}
+header.top{padding:28px 20px 8px;max-width:900px;margin:0 auto;}
+header.top h1{margin:0 0 6px;font-size:1.7rem;line-height:1.25;}
+header.top p{margin:0;color:var(--muted);}
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--border);padding:10px 12px;}
+nav.tabs .inner{max-width:900px;margin:0 auto;display:flex;gap:8px;overflow-x:auto;}
+nav.tabs button{flex:0 0 auto;font:inherit;font-size:.92rem;padding:7px 14px;border-radius:999px;border:1px solid var(--border);background:var(--card);color:var(--fg);cursor:pointer;}
+nav.tabs button[aria-selected="true"]{background:var(--accent);color:#fff;border-color:var(--accent);}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) nav.tabs button[aria-selected="true"]{color:#0c1220;}}
+:root[data-theme="dark"] nav.tabs button[aria-selected="true"]{color:#0c1220;}
+main{max-width:900px;margin:0 auto;padding:18px 20px 60px;}
+section.panel[hidden]{display:none;}
+h2{font-size:1.45rem;margin:2.2rem 0 .6rem;padding-top:.6rem;border-top:2px solid var(--border);}
+h2:first-child{border-top:0;margin-top:.5rem;}
+h3{font-size:1.1rem;margin:1.5rem 0 .4rem;color:var(--accent);}
+p,li{overflow-wrap:anywhere;}
+.box{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:12px 16px;margin:12px 0;}
+.box.key{border-left-color:var(--accent);background:var(--accent-soft);}
+.box.watch{border-left-color:var(--warn);background:var(--warn-soft);}
+.box.ex{border-left-color:var(--good);background:var(--good-soft);}
+.box strong.t{display:block;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px;opacity:.85;}
+.box ul,.box ol{margin:.3rem 0 .3rem 1.2rem;padding:0;}
+.box p{margin:.35rem 0;}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:.95rem;}
+.tw{overflow-x:auto;max-width:100%;}
+th,td{border:1px solid var(--border);padding:6px 10px;text-align:left;vertical-align:top;}
+th{background:var(--accent-soft);}
+mjx-container[display="true"]{overflow-x:auto;overflow-y:hidden;max-width:100%;}
+ol.qs{padding-left:0;list-style:none;counter-reset:q;}
+ol.qs>li{counter-increment:q;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 16px 12px 16px;margin:12px 0;}
+ol.qs>li::before{content:"Q" counter(q);display:inline-block;font-weight:700;color:var(--accent);margin-bottom:2px;}
+ol.qs .sub{margin:.3rem 0 .3rem 1.3rem;padding:0;list-style:lower-alpha;}
+details{margin-top:8px;}
+details summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:.92rem;}
+details .ans{margin-top:8px;padding:10px 14px;background:var(--good-soft);border-radius:8px;border:1px solid var(--border);}
+details .ans p{margin:.3rem 0;}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0 4px;}
+.tools button{font:inherit;font-size:.9rem;padding:6px 12px;border-radius:8px;border:1px solid var(--border);background:var(--card);color:var(--fg);cursor:pointer;}
+.muted{color:var(--muted);font-size:.92rem;}
+.tag{display:inline-block;font-size:.75rem;padding:1px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);margin-left:6px;vertical-align:middle;}
+@media print{
+  nav.tabs,.tools{display:none;}
+  section.panel[hidden]{display:block;}
+  details .ans{display:block;}
+  body{background:#fff;color:#000;}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Mathematics 10E (MYP 5 Extended)<br><span style="font-weight:500;font-size:1.1rem;color:var(--muted)">Study guide &amp; practice tests · Chapters 1–6</span></h1>
+  <p>Built from all 118 pages you sent: Indices · Sets &amp; Venn diagrams · Expansion &amp; factorisation · Radicals &amp; surds · Pythagoras' theorem · Coordinate geometry.</p>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <div class="inner" role="tablist">
+    <button role="tab" data-target="guide" aria-selected="true">Study guide</button>
+    <button role="tab" data-target="testA" aria-selected="false">Test A · Ch 1–2</button>
+    <button role="tab" data-target="testB" aria-selected="false">Test B · Ch 3–4</button>
+    <button role="tab" data-target="testC" aria-selected="false">Test C · Ch 5–6</button>
+    <button role="tab" data-target="testD" aria-selected="false">Test D · Mixed</button>
+  </div>
+</nav>
+
+<main>
+
+<!-- ===================================================== STUDY GUIDE ===================================================== -->
+<section class="panel" id="guide">
+
+<div class="box key"><strong class="t">How to use this</strong>
+<p>Read a chapter, cover the worked examples and redo them yourself, then take the matching test. Tests A–C each cover two chapters; Test D mixes all six like a final review. Every question has a hidden worked answer, so try it on paper first, then reveal it.</p></div>
+
+<!-- ---------- CH 1 ---------- -->
+<h2 id="ch1">Chapter 1 · Indices</h2>
+
+<h3>1A Index laws</h3>
+<p>In \(a^n\), \(a\) is the <b>base</b> and \(n\) is the <b>index</b> (power / exponent). For positive \(a,b\) and integer \(m,n\):</p>
+<div class="tw"><table>
+<tr><th>Law</th><th>In words</th></tr>
+<tr><td>\(a^m \times a^n = a^{m+n}\)</td><td>Same base, multiply: <b>add</b> indices</td></tr>
+<tr><td>\(\dfrac{a^m}{a^n} = a^{m-n}\)</td><td>Same base, divide: <b>subtract</b> indices</td></tr>
+<tr><td>\((a^m)^n = a^{mn}\)</td><td>Power of a power: <b>multiply</b> indices</td></tr>
+<tr><td>\((ab)^n = a^n b^n\) and \(\left(\dfrac ab\right)^n=\dfrac{a^n}{b^n}\)</td><td>Each factor gets the outside power</td></tr>
+<tr><td>\(a^0 = 1\) \((a\ne 0)\)</td><td>Anything non-zero to the power 0 is 1</td></tr>
+<tr><td>\(a^{-n}=\dfrac1{a^n}\), \(\;\left(\dfrac ab\right)^{-n}=\left(\dfrac ba\right)^n\)</td><td>Negative index = reciprocal</td></tr>
+</table></div>
+<div class="box ex"><strong class="t">Worked example</strong>
+<p>Express \(\dfrac{9^{x+1}}{27^{x-1}}\) with a prime base: \(\dfrac{3^{2x+2}}{3^{3x-3}} = 3^{2x+2-3x+3}=3^{5-x}\).</p>
+<p><b>Trick:</b> to compare or combine different bases, first write every base as a power of the same prime.</p></div>
+<div class="box watch"><strong class="t">Watch out</strong>
+<ul><li>\(-3^2 = -9\) but \((-3)^2 = 9\). The index only applies to what is directly before it.</li>
+<li>\(3^{-1}+3^{-2}\) is <b>not</b> \(3^{-3}\); the laws only work for products/quotients, not sums.</li>
+<li>\(2a^{-1}=\dfrac2a\), not \(\dfrac1{2a}\).</li></ul></div>
+
+<h3>1B Rational indices</h3>
+<div class="box key"><strong class="t">Key idea</strong>
+<p>\(a^{1/n}=\sqrt[n]{a}\) and \(a^{m/n}=\left(\sqrt[n]{a}\right)^m=\sqrt[n]{a^m}\). Negative: \(a^{-m/n}=\dfrac1{a^{m/n}}\).</p></div>
+<ul>
+<li>Method: write the base as a prime power, then use the index laws: \(8^{2/3}=(2^3)^{2/3}=2^2=4\); \(27^{-2/3}=\dfrac1{3^2}=\dfrac19\).</li>
+<li>Take the root first, then the power: it keeps numbers small.</li>
+<li>\((-8)^{1/3}=-2\) is fine (odd root of a negative), but \((-4)^{1/2}\) is not a real number.</li>
+<li>Powers of the form \(a^{1/2}=\sqrt a\) will return in Chapter 4 (surds).</li>
+</ul>
+
+<h3>1C Scientific notation (standard form)</h3>
+<p>Form: \(a\times10^k\) with \(1\le a\lt10\) and \(k\in\mathbb Z\). Large numbers have positive \(k\); numbers below 1 have negative \(k\). Examples: \(23\,600\,000=2.36\times10^7\), \(0.0000236=2.36\times10^{-5}\).</p>
+<ul>
+<li><b>Multiply:</b> multiply the \(a\)-parts, add the powers of 10, then re-normalise: \((3\times10^4)(8\times10^3)=24\times10^7=2.4\times10^8\).</li>
+<li><b>Divide:</b> divide the \(a\)-parts, subtract the powers of 10.</li>
+<li>Calculators show \(6.25\times10^{-7}\) as <code>6.25E-7</code>. Write it out properly in an answer.</li>
+<li>"How many times larger": divide. \(3\times10^{11}\) is \(10^{11-9}\cdot\dfrac33\)... i.e. \(\dfrac{3\times10^{11}}{3\times10^{9}}=100\) times larger than \(3\times10^9\).</li>
+</ul>
+<div class="box watch"><strong class="t">Watch out</strong><p>\(12\times10^5\) is <b>not</b> scientific notation (the front number must be at least 1 and below 10). Round to the requested significant figures only at the end.</p></div>
+
+<!-- ---------- CH 2 ---------- -->
+<h2 id="ch2">Chapter 2 · Sets and Venn diagrams</h2>
+
+<h3>2A Set notation and number sets</h3>
+<ul>
+<li>\(\in\) "is an element of", \(\notin\) "is not an element of". \(\varnothing\) or \(\{\}\) is the empty set. \(n(S)\) = number of elements. Sets can be finite or infinite.</li>
+<li><b>Number sets</b> (this book's conventions): \(\mathbb N=\{0,1,2,3,\dots\}\), \(\mathbb Z=\{0,\pm1,\pm2,\dots\}\), \(\mathbb Z^+=\{1,2,3,\dots\}\), \(\mathbb Q\) = rationals \(\dfrac pq\) with \(q\ne0\), \(\mathbb R\) = all reals.</li>
+<li>\(\mathbb N\subset\mathbb Z\subset\mathbb Q\subset\mathbb R\). <b>Irrationals</b> \(\mathbb Q'\): surds like \(\sqrt2\), \(\pi\), any decimal that neither terminates nor recurs.</li>
+<li>\(\sqrt{-2}\) is not real; \(\sqrt{49}=7\) <i>is</i> rational.</li>
+</ul>
+<div class="box ex"><strong class="t">Recurring decimal → fraction</strong>
+<p>Show \(0.\overline{36}\) is rational: let \(x=0.363636\ldots\) Then \(100x=36.3636\ldots\), so \(99x=36\) and \(x=\dfrac{36}{99}=\dfrac4{11}\).</p>
+<p>(One repeating digit: multiply by 10; two repeating digits: multiply by 100; and so on. Subtract.)</p></div>
+<p><b>Counter-examples</b> to remember: \(\sqrt2+(-\sqrt2)=0\) (sum of irrationals is rational); \(\sqrt2\times\sqrt2=2\) (product of irrationals is rational).</p>
+
+<h3>2B Set-builder and interval notation</h3>
+<p>\(\{x\mid -3\lt x\le2,\ x\in\mathbb R\}\) reads "the set of all real \(x\) such that \(x\) is greater than \(-3\) and at most 2". On a number line an <b>open circle</b> means the endpoint is excluded (\(\lt,\gt\)); a <b>closed circle</b> means it is included (\(\le,\ge\)). For integers (\(x\in\mathbb Z\)) draw separate dots. If no set is stated, assume \(\mathbb R\).</p>
+
+<h3>2C Subsets and complements</h3>
+<ul>
+<li>\(A\subseteq B\) (the book writes \(A\subset B\)): every element of \(A\) is in \(B\). \(\varnothing\) is a subset of every set. \(A\not\subset B\) if even one element of \(A\) is missing from \(B\).</li>
+<li>The <b>universal set</b> \(U\) is everything under consideration. The <b>complement</b> \(A'=\{x\mid x\notin A,\ x\in U\}\), so \(n(A')=n(U)-n(A)\).</li>
+</ul>
+
+<h3>2D–2E Venn diagrams, union and intersection</h3>
+<ul>
+<li>\(A\cap B\) (intersection): elements in <b>both</b>. \(A\cup B\) (union): elements in <b>A or B or both</b>.</li>
+<li>\(A\) and \(B\) are <b>disjoint</b> (mutually exclusive) if \(A\cap B=\varnothing\); draw non-overlapping circles.</li>
+<li>If \(A\subset B\), draw the circle for \(A\) inside \(B\).</li>
+<li>Shading regions: do the brackets first, e.g. \((A\cup B)'\) = everything outside both circles; \(A'\cap B\) = in \(B\) but not in \(A\).</li>
+</ul>
+<div class="box key"><strong class="t">Identities to know</strong>
+<p>\(A\cup A'=U\), \(\;A\cap A'=\varnothing\), \(\;(A\cap B)'=A'\cup B'\), \(\;(A\cup B)'=A'\cap B'\) (<b>De Morgan's laws</b>).</p></div>
+
+<h3>2F–2G Numbers in regions and problem solving</h3>
+<div class="box key"><strong class="t">Counting rule</strong>
+<p>\(n(A\cup B)=n(A)+n(B)-n(A\cap B)\)</p>
+<p>Regions of a two-set diagram: \(A\) only, \(A\cap B\), \(B\) only, neither. Their numbers add up to \(n(U)\).</p></div>
+<ol>
+<li>Draw the Venn diagram with \(U\) as a rectangle.</li>
+<li>Fill in the <b>overlap first</b> (if known), then work outwards: "A only" = \(n(A)-n(A\cap B)\).</li>
+<li>Use "neither" and \(n(U)\) to find any remaining region; check that all regions sum to \(n(U)\).</li>
+<li>With three sets, start at the centre \(A\cap B\cap C\), then the pairwise overlaps (minus the centre), then single-set regions.</li>
+</ol>
+<p><b>Three-set union:</b> \(n(A\cup B\cup C)=n(A)+n(B)+n(C)-n(A\cap B)-n(A\cap C)-n(B\cap C)+n(A\cap B\cap C)\).</p>
+<div class="box ex"><strong class="t">Worked example</strong>
+<p>\(n(U)=25,\ n(P)=10,\ n(Q)=12,\ n(P\cap Q)=3\). Then \(P\) only \(=7\), \(Q\) only \(=9\), \(n(P\cup Q)=7+3+9=19\), neither \(=25-19=6\).</p></div>
+
+<h3>2H The algebra of sets</h3>
+<div class="tw"><table>
+<tr><th>Law</th><th>Statement</th></tr>
+<tr><td>Commutative</td><td>\(A\cap B=B\cap A\); \(A\cup B=B\cup A\)</td></tr>
+<tr><td>Associative</td><td>\(A\cap(B\cap C)=(A\cap B)\cap C\); \(A\cup(B\cup C)=(A\cup B)\cup C\)</td></tr>
+<tr><td>Distributive</td><td>\(A\cup(B\cap C)=(A\cup B)\cap(A\cup C)\); \(A\cap(B\cup C)=(A\cap B)\cup(A\cap C)\)</td></tr>
+<tr><td>Identity</td><td>\(A\cup\varnothing=A\); \(A\cap U=A\)</td></tr>
+<tr><td>Complement</td><td>\(A\cup A'=U\); \(A\cap A'=\varnothing\)</td></tr>
+<tr><td>Domination</td><td>\(A\cup U=U\); \(A\cap\varnothing=\varnothing\)</td></tr>
+<tr><td>Idempotent</td><td>\(A\cap A=A\); \(A\cup A=A\)</td></tr>
+<tr><td>De Morgan</td><td>\((A\cap B)'=A'\cup B'\); \((A\cup B)'=A'\cap B'\)</td></tr>
+<tr><td>Involution</td><td>\((A')'=A\)</td></tr>
+</table></div>
+<p><b>Proof pattern:</b> start from one side, apply one named law per line, and finish at the other side. Example: \(A\cup(B\cap A')=(A\cup B)\cap(A\cup A')=(A\cup B)\cap U=A\cup B\).</p>
+
+<!-- ---------- CH 3 ---------- -->
+<h2 id="ch3">Chapter 3 · Algebraic expansion and factorisation</h2>
+
+<h3>3A–3B Expansion laws</h3>
+<div class="tw"><table>
+<tr><th>Name</th><th>Rule</th></tr>
+<tr><td>Distributive</td><td>\(a(b+c)=ab+ac\)</td></tr>
+<tr><td>Two brackets (FOIL)</td><td>\((a+b)(c+d)=ac+ad+bc+bd\)</td></tr>
+<tr><td>Difference of two squares</td><td>\((a+b)(a-b)=a^2-b^2\)</td></tr>
+<tr><td>Perfect squares</td><td>\((a+b)^2=a^2+2ab+b^2\); \((a-b)^2=a^2-2ab+b^2\)</td></tr>
+</table></div>
+<ul>
+<li>With three or more brackets, expand two, simplify, then expand with the next. A product with \(m\) and \(n\) terms gives \(m\times n\) terms <i>before</i> collecting like terms.</li>
+<li>Example: \((x+1)(x-3)(x+2)=(x^2-2x-3)(x+2)=x^3-7x-6\).</li>
+</ul>
+<div class="box watch"><strong class="t">Watch out</strong><p>\((a+b)^2\ne a^2+b^2\). The middle term \(2ab\) is the one students forget. In \((3-4y)^2\) the middle term is \(2(3)(-4y)=-24y\).</p></div>
+
+<h3>3C The binomial expansion</h3>
+<div class="box key"><strong class="t">Cubes and fourth powers</strong>
+<p>\((a+b)^3=a^3+3a^2b+3ab^2+b^3\)</p>
+<p>\((a+b)^4=a^4+4a^3b+6a^2b^2+4ab^3+b^4\)</p></div>
+<ul>
+<li><b>Pascal's triangle</b> gives the coefficients: rows 1 | 1 1 | 1 2 1 | 1 3 3 1 | 1 4 6 4 1 | 1 5 10 10 5 1 | … Each number is the sum of the two above it. Row \(n\) gives \((a+b)^n\).</li>
+<li>For \((a-b)^n\) the signs alternate \(+,-,+,-,\dots\)</li>
+<li>When substituting, <b>use brackets</b>: \((3x-2)^3=(3x)^3+3(3x)^2(-2)+3(3x)(-2)^2+(-2)^3=27x^3-54x^2+36x-8\).</li>
+<li>The coefficients of \((a+b)^n\) add up to \(2^n\) (put \(a=b=1\)).</li>
+<li>Check: substitute a value, e.g. \(x=1\) in \((x-2)^5\) gives \(-1\); your expansion must also give \(-1\).</li>
+</ul>
+
+<h3>3D–3H Factorisation</h3>
+<p>Factorisation is expansion in reverse: write an expression as a <b>product of factors</b>. "Fully factorise" means keep going until nothing more can be taken out.</p>
+<div class="box key"><strong class="t">Which method? (follow this order)</strong>
+<ol>
+<li><b>Common factor first</b> (include \(-1\) if the leading term is negative). Includes common <i>bracket</i> factors: \(a(x+2)+3(x+2)=(x+2)(a+3)\).</li>
+<li><b>Two terms:</b> difference of two squares \(a^2-b^2=(a+b)(a-b)\).</li>
+<li><b>Three terms:</b> perfect square \(a^2\pm2ab+b^2=(a\pm b)^2\), or a quadratic trinomial (below).</li>
+<li><b>Four terms:</b> group in pairs: \(ab+ac+bd+cd=a(b+c)+d(b+c)=(b+c)(a+d)\). Reorder terms if needed.</li>
+</ol>
+<p>Always expand your answer to check.</p></div>
+<ul>
+<li><b>\(x^2+px+q\):</b> find two numbers with <b>sum \(p\)</b> and <b>product \(q\)</b>: \(x^2-2x-15=(x-5)(x+3)\) because \(-5+3=-2\), \((-5)(3)=-15\).</li>
+<li><b>\(ax^2+bx+c\) (\(a\ne1\)), "splitting the middle term":</b> find \(p,q\) with <b>sum \(b\)</b> and <b>product \(ac\)</b>; write \(bx=px+qx\); group in pairs. Example \(6x^2-11x-10\): \(ac=-60\), \(b=-11\) → \(-15\) and \(4\): \(6x^2-15x+4x-10=3x(2x-5)+2(2x-5)=(2x-5)(3x+2)\).</li>
+<li>Negative leading coefficient: take out \(-1\) first. \(-5x^2-7x+6=-(5x^2+7x-6)=-(x+2)(5x-3)\).</li>
+<li>Common factor then trinomial: \(3x^2+6x-72=3(x^2+2x-24)=3(x+6)(x-4)\).</li>
+<li>Difference of squares can hide inside brackets: \((3x+5)^2-(2x-3)^2=[(3x+5)-(2x-3)][(3x+5)+(2x-3)]=(x+8)(5x+2)\).</li>
+</ul>
+<div class="box watch"><strong class="t">Watch out</strong><p>\(x^2+9\) does <b>not</b> factorise over the reals (sum of squares). Also, \(4x^2-16=4(x^2-4)=4(x+2)(x-2)\): take out the common factor <i>before</i> spotting the difference of squares.</p></div>
+
+<!-- ---------- CH 4 ---------- -->
+<h2 id="ch4">Chapter 4 · Radicals and surds</h2>
+
+<h3>4A Radicals</h3>
+<ul>
+<li>\(\sqrt a\) is the <b>positive</b> number whose square is \(a\); \(\sqrt a\) is real only if \(a\ge0\). So \((\sqrt a)^2=a\) and \(\sqrt a\times\sqrt a=a\).</li>
+<li>Cube root \(\sqrt[3]{a}\): \((\sqrt[3]a)^3=a\); it exists for negative \(a\) too (\(\sqrt[3]{-27}=-3\)).</li>
+<li>A <b>radical</b> is a number written with a root sign. If it can be written as a perfect power (\(\sqrt{49}=7\)) it is <b>rational</b>; otherwise it is an irrational radical, called a <b>surd</b> (\(\sqrt2,\ \sqrt3,\ \sqrt[3]{5}\)).</li>
+</ul>
+<div class="box key"><strong class="t">Rules (for \(a,b\ge0\))</strong>
+<p>\(\sqrt a\times\sqrt b=\sqrt{ab}\) &nbsp;&nbsp; \(\dfrac{\sqrt a}{\sqrt b}=\sqrt{\dfrac ab}\ (b\gt0)\) &nbsp;&nbsp; \((c\sqrt a)^2=c^2a\)</p></div>
+<div class="box watch"><strong class="t">Not a law!</strong><p>\(\sqrt a+\sqrt b\ne\sqrt{a+b}\) and \(\sqrt a-\sqrt b\ne\sqrt{a-b}\). Test: \(\sqrt9+\sqrt{16}=7\) but \(\sqrt{25}=5\).</p></div>
+
+<h3>4B Simplest radical form</h3>
+<p>Take out the <b>largest perfect-square factor</b>: \(\sqrt{28}=\sqrt{4\times7}=2\sqrt7\); \(\sqrt{72}=6\sqrt2\); \(3\sqrt5\times2\sqrt{10}=6\sqrt{50}=30\sqrt2\). Simplify fractions with radicals by factoring: \(\dfrac{4+\sqrt{8}}{2}=\dfrac{4+2\sqrt2}{2}=2+\sqrt2\) (this is the form \(a+b\sqrt n\)).</p>
+
+<h3>4C Adding and subtracting</h3>
+<p>Only <b>like radicals</b> combine, exactly like like terms: \(3\sqrt2-4\sqrt2=-\sqrt2\); \(5\sqrt3+2\sqrt5-\sqrt3+7\sqrt5=4\sqrt3+9\sqrt5\). Simplify each radical first: \(\sqrt{20}+\sqrt5=2\sqrt5+\sqrt5=3\sqrt5\). Write the whole number before the radical.</p>
+
+<h3>4D Multiplications involving radicals</h3>
+<p>Expand exactly as in algebra, using \(\sqrt a\sqrt a=a\):</p>
+<ul>
+<li>\(\sqrt3(\sqrt3+1)=3+\sqrt3\)</li>
+<li>\((3-\sqrt2)(4+2\sqrt2)=12+6\sqrt2-4\sqrt2-4=8+2\sqrt2\)</li>
+<li>\((\sqrt3-\sqrt7)^2=3-2\sqrt{21}+7=10-2\sqrt{21}\)</li>
+<li><b>Conjugates:</b> \((a+b\sqrt c)(a-b\sqrt c)=a^2-b^2c\), always <b>rational</b> (no radical left): \((3+\sqrt2)(3-\sqrt2)=7\).</li>
+</ul>
+
+<h3>4E Division by radicals (rationalising the denominator)</h3>
+<ul>
+<li><b>Simple radical:</b> multiply top and bottom by that radical: \(\dfrac6{\sqrt3}=\dfrac{6\sqrt3}3=2\sqrt3\); \(\dfrac{10}{2\sqrt2}=\dfrac{10\sqrt2}{4}=\dfrac{5\sqrt2}2\).</li>
+<li><b>\(a+b\sqrt c\) in the denominator:</b> multiply top and bottom by the <b>conjugate</b> \(a-b\sqrt c\): \(\dfrac1{3+5\sqrt2}\cdot\dfrac{3-5\sqrt2}{3-5\sqrt2}=\dfrac{3-5\sqrt2}{9-50}=\dfrac{5\sqrt2-3}{41}\).</li>
+</ul>
+
+<h3>4F Equality of surds</h3>
+<div class="box key"><strong class="t">Theorem</strong>
+<p>If \(\sqrt k\) is irrational and \(a,b,c,d\) are rational, then \(a+b\sqrt k=c+d\sqrt k\ \Rightarrow\ a=c\) and \(b=d\).</p>
+<p>(Rational parts match, surd parts match.) It <b>fails for rational radicals</b>: \(1+4\sqrt4=3+3\sqrt4\) but \(1\ne3\).</p></div>
+<ul>
+<li><b>Use it</b> to find rational \(x,y\): expand, collect rational and \(\sqrt k\) parts, equate. E.g. \((a+2\sqrt2)(3-\sqrt2)=5+b\sqrt2\) gives \(3a-4=5\), \(6-a=b\), so \(a=3,\ b=3\).</li>
+<li><b>Proof that \(\sqrt2\) is irrational</b> (by contradiction): suppose \(\sqrt2=\frac pq\) in lowest terms. Then \(p^2=2q^2\), so \(p\) is even, \(p=2k\); then \(q^2=2k^2\), so \(q\) is even too. Both even contradicts "lowest terms", so \(\sqrt2\) is irrational.</li>
+</ul>
+
+<!-- ---------- CH 5 ---------- -->
+<h2 id="ch5">Chapter 5 · Pythagoras' theorem</h2>
+
+<h3>5A The theorem</h3>
+<div class="box key"><strong class="t">Pythagoras</strong>
+<p>In a right-angled triangle with legs \(a,b\) and hypotenuse \(c\): \(\;c^2=a^2+b^2\).</p>
+<p>The <b>hypotenuse</b> is opposite the right angle and is the longest side. Geometrically: the square on the hypotenuse equals the sum of the squares on the other two sides.</p></div>
+<ul>
+<li>Solving \(x^2=k\) gives \(x=\sqrt k\) only (reject \(-\sqrt k\): lengths are positive). Leave answers in simplest radical form unless asked for decimals.</li>
+<li>Finding a leg: \(a^2=c^2-b^2\) (subtract!).</li>
+</ul>
+
+<h3>5B The converse</h3>
+<p>If the three sides satisfy \(a^2+b^2=c^2\), the triangle is right-angled. <b>Test:</b> square the two shorter sides, add, compare with the square of the longest. The right angle is opposite the longest side. Example: \(5,6,8\): \(25+36=61\ne64\), so not right-angled.</p>
+
+<h3>5C Pythagorean triples</h3>
+<ul>
+<li>A set of <b>positive integers</b> \(\{a,b,c\}\), \(a\lt b\lt c\), with \(a^2+b^2=c^2\). Written in ascending order. Examples: \(\{3,4,5\},\{5,12,13\},\{8,15,17\},\{7,24,25\},\{20,21,29\}\).</li>
+<li>Any multiple works: \(\{6,8,10\}\), \(\{9,12,15\}\), … A set like \(\{2,3,\sqrt{13}\}\) is <b>not</b> a triple (not all integers).</li>
+<li>A family: \(\{2n+1,\ 2n^2+2n,\ 2n^2+2n+1\}\) for \(n\in\mathbb Z^+\) (proved via difference of squares). Also \(\{4k,\ k^2-4,\ k^2+4\}\) for \(k\ge3\).</li>
+<li>To find \(k\) in \(\{9,k,15\}\): \(81+k^2=225\Rightarrow k=12\).</li>
+</ul>
+
+<h3>5D Problem solving using Pythagoras</h3>
+<ol>
+<li>Draw a neat diagram. 2. Mark known lengths and right angles. 3. Let \(x\) be the unknown. 4. Apply Pythagoras. 5. Solve. 6. Answer in a sentence with units.</li>
+</ol>
+<div class="tw"><table>
+<tr><th>Figure</th><th>Useful fact</th></tr>
+<tr><td>Rectangle</td><td>Diagonal forms a right triangle with two adjacent sides</td></tr>
+<tr><td>Square, rhombus</td><td>Diagonals bisect each other <b>at right angles</b> → four right triangles with legs = half-diagonals</td></tr>
+<tr><td>Isosceles triangle</td><td>Altitude bisects the base at right angles</td></tr>
+<tr><td>Equilateral, side \(s\)</td><td>Height \(=\dfrac{\sqrt3}{2}s\), area \(=\dfrac{\sqrt3}{4}s^2\) (e.g. \(s=6\): height \(\sqrt{27}\), area \(3\sqrt{27}\approx15.6\) cm²)</td></tr>
+</table></div>
+<p>Direction/speed problems: distance \(=\) speed \(\times\) time for each leg first, then Pythagoras for the distance apart (e.g. 16 km/h east and 20 km/h south for 4 h: legs 64 and 80, apart \(\sqrt{64^2+80^2}\approx102\) km).</p>
+
+<h3>5E Circle problems</h3>
+<div class="box key"><strong class="t">Three right-angle facts</strong>
+<ol>
+<li><b>Angle in a semicircle</b> is a right angle (so a triangle on a diameter is right-angled at the point on the circle).</li>
+<li>The line from the <b>centre perpendicular to a chord bisects</b> the chord. Right triangle: radius = hypotenuse, half-chord and distance-to-chord = legs.</li>
+<li>A <b>tangent is perpendicular to the radius</b> at the point of contact. Tangent length from a point at distance \(d\) from the centre: \(t=\sqrt{d^2-r^2}\).</li>
+</ol></div>
+<ul>
+<li>Radius 8, chord 10: distance to chord \(=\sqrt{8^2-5^2}=\sqrt{39}\approx6.24\).</li>
+<li><b>Common (external) tangent</b> of circles with radii \(r_1,r_2\), centres \(d\) apart: draw a line parallel to the tangent through the smaller centre to make a right triangle with legs \(t\) and \(r_1-r_2\): \(t=\sqrt{d^2-(r_1-r_2)^2}\). Going the other way: \(d=\sqrt{t^2+(r_1-r_2)^2}\).</li>
+</ul>
+
+<h3>5F 3-dimensional problems</h3>
+<ul>
+<li>Sometimes use Pythagoras <b>twice</b>: first the diagonal of the base, then the triangle that includes the height.</li>
+<li>Box \(a\times b\times c\): longest diagonal \(=\sqrt{a^2+b^2+c^2}\).</li>
+<li>Cylinder/cone: height, radius and slant (or rope/nail) form a right triangle: a 50 m rope in a silo of diameter 12 m: \(h=\sqrt{50^2-12^2}\approx48.5\) m.</li>
+<li><b>Square-based pyramid</b> (base side \(s\), height \(h\)): half the base diagonal is \(\dfrac{s\sqrt2}2\); slant edge \(=\sqrt{\left(\dfrac{s\sqrt2}2\right)^2+h^2}\). For \(s=50,\ h=40\): \(\sqrt{1250+1600}\approx53.4\) m.</li>
+</ul>
+
+<!-- ---------- CH 6 ---------- -->
+<h2 id="ch6">Chapter 6 · Coordinate geometry</h2>
+
+<h3>6A Distance between two points</h3>
+<div class="box key"><strong class="t">Distance formula</strong>
+<p>\(d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}\) (it is Pythagoras on the "steps").</p></div>
+<ul>
+<li>\(A(-2,1),B(3,4)\): \(AB=\sqrt{5^2+3^2}=\sqrt{34}\).</li>
+<li><b>Classify a triangle:</b> find all three side lengths. Two equal → isosceles; all equal → equilateral; none equal → scalene. Right-angled? Check \(a^2+b^2=c^2\) with the longest side as \(c\).</li>
+<li>Unknown coordinate: set the distance formula equal to the given length and square both sides; expect <b>two</b> solutions (two possible locations).</li>
+<li>Equidistant from \(P\) and \(Q\): set \(PA=QA\) and square.</li>
+</ul>
+
+<h3>6B Midpoints</h3>
+<p>Midpoint of \([AB]\): \(\left(\dfrac{x_1+x_2}2,\ \dfrac{y_1+y_2}2\right)\), the average of the coordinates. <b>Finding an endpoint:</b> if \(M\) is the midpoint of \([AB]\) then \(B=(2x_M-x_A,\ 2y_M-y_A)\), or use equal steps from \(A\) to \(M\) and again from \(M\) to \(B\). Example: \(A(1,3)\), \(M(4,-2)\) → \(B(7,-7)\).</p>
+
+<h3>6C Gradient</h3>
+<div class="box key"><strong class="t">Gradient formula</strong>
+<p>\(m=\dfrac{\text{vertical step}}{\text{horizontal step}}=\dfrac{y_2-y_1}{x_2-x_1}\)</p></div>
+<ul>
+<li>Upward-sloping: positive; downward-sloping: negative.</li>
+<li><b>Horizontal</b> line: gradient 0. <b>Vertical</b> line: gradient <b>undefined</b>.</li>
+<li>Unknown \(t\): set the gradient expression equal to the given value and solve.</li>
+</ul>
+
+<h3>6D Parallel, perpendicular and collinear</h3>
+<div class="tw"><table>
+<tr><th>Relationship</th><th>Test</th></tr>
+<tr><td>Parallel</td><td>Equal gradients: \(m_1=m_2\)</td></tr>
+<tr><td>Perpendicular (neither line horizontal/vertical)</td><td>Negative reciprocals: \(m_1m_2=-1\), e.g. \(\frac23\) and \(-\frac32\)</td></tr>
+<tr><td>Collinear (A, B, C on one line)</td><td>Gradient of \([AB]\) = gradient of \([BC]\)</td></tr>
+</table></div>
+<p>Proving shapes: parallelogram (opposite sides parallel, or diagonals bisect each other), rhombus (all sides equal, diagonals perpendicular), kite, right-angled triangle (two perpendicular sides), isosceles triangle with a perpendicular median. Midpoint theorem: the segment joining two midpoints of a triangle is parallel to the third side and half as long.</p>
+
+<h3>6E The equation of a line</h3>
+<div class="tw"><table>
+<tr><th>Form</th><th>Equation</th><th>Notes</th></tr>
+<tr><td>Gradient-intercept</td><td>\(y=mx+c\)</td><td>\(m\) = gradient, \(c\) = y-intercept</td></tr>
+<tr><td>General form</td><td>\(Ax+By=C\)</td><td>Usually positive \(x\)-coefficient; gradient \(=-\dfrac AB\)</td></tr>
+<tr><td>Point-gradient</td><td>\(y-b=m(x-a)\)</td><td>Gradient \(m\), passes through \((a,b)\)</td></tr>
+</table></div>
+<ul>
+<li>You need either <b>a gradient and a point</b>, or <b>two points</b> (find the gradient first, then use either point).</li>
+<li><b>Quick general form:</b> gradient \(\frac34\) → \(3x-4y=C\); gradient \(-\frac34\) → \(3x+4y=C\). Find \(C\) by substituting the point.</li>
+<li><b>Parallel</b> to \(3x+5y=2\): same left side, \(3x+5y=C\). <b>Perpendicular</b>: swap and change one sign: \(5x-3y=C\).</li>
+<li>x-intercept: put \(y=0\). y-intercept: put \(x=0\).</li>
+</ul>
+<div class="box ex"><strong class="t">Worked example</strong>
+<p>Line through \(A(1,3)\) and \(B(-2,5)\): gradient \(=\dfrac{5-3}{-2-1}=-\dfrac23\). Then \(y-3=-\tfrac23(x-1)\) → \(y=-\tfrac23x+\tfrac{11}3\) (or \(2x+3y=11\)).</p></div>
+<p><b>Tangent to a circle:</b> gradient of radius from centre to point of contact → tangent gradient is its negative reciprocal → equation through the point of contact. Centre \((2,3)\), contact \((-1,5)\): radius gradient \(-\frac23\), tangent gradient \(\frac32\), tangent \(3x-2y=-13\).</p>
+
+<h3>6F Perpendicular bisectors</h3>
+<ul>
+<li>The perpendicular bisector of \([AB]\) is perpendicular to \([AB]\) and passes through its <b>midpoint</b>. Points on it are <b>equidistant</b> from \(A\) and \(B\).</li>
+<li>Steps: midpoint of \([AB]\) → gradient of \([AB]\) → negative reciprocal → equation. Example \(A(-1,2),B(3,4)\): midpoint \((1,3)\), gradient \(\frac12\), perpendicular gradient \(-2\), line \(2x+y=5\).</li>
+<li>The perpendicular bisectors of a triangle's sides meet at one point equidistant from all three vertices: the <b>circumcentre</b>, the centre of the circle through \(P,Q,R\). Find it by solving two bisector equations simultaneously.</li>
+<li>Boundaries between "closest to A / closest to B" regions (Voronoi diagrams) are perpendicular bisectors.</li>
+</ul>
+
+<h3>6G Distance from a point to a line</h3>
+<p>Shortest distance = perpendicular distance \(NP\).</p>
+<ol>
+<li>Find the gradient of the line \(l\), hence the gradient of \([NP]\) (negative reciprocal).</li>
+<li>Write the equation of \([NP]\) through \(P\).</li>
+<li>Solve the two equations simultaneously to get \(N\).</li>
+<li>Use the distance formula for \(NP\).</li>
+</ol>
+<p><b>Shortcut</b> (derived in the exercise): distance from \((h,k)\) to \(Ax+By+C=0\) is \(\dfrac{|Ah+Bk+C|}{\sqrt{A^2+B^2}}\). Distance between <b>parallel lines</b>: take any point on one line and find its distance to the other.</p>
+
+<h3>6H 3-dimensional coordinate geometry</h3>
+<ul>
+<li>Points are ordered triples \((x,y,z)\) with three perpendicular axes \(X,Y,Z\); \((2,3,4)\) is a corner of a box opposite the origin.</li>
+<li>Distance \(AB=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}\). Midpoint \(=\left(\dfrac{x_1+x_2}2,\dfrac{y_1+y_2}2,\dfrac{z_1+z_2}2\right)\).</li>
+<li>All points \(2\) units from the origin satisfy \(x^2+y^2+z^2=4\): a <b>sphere</b>. In 2D, \(x^2+y^2=1\) is a circle.</li>
+<li>Example: \(A(3,-1,2),B(-1,2,4)\): \(AB=\sqrt{16+9+4}=\sqrt{29}\), midpoint \((1,\tfrac12,3)\).</li>
+</ul>
+
+<!-- ---------- FORMULA SHEET ---------- -->
+<h2 id="sheet">One-page formula sheet</h2>
+<div class="tw"><table>
+<tr><th>Topic</th><th>Key facts</th></tr>
+<tr><td>Indices</td><td>\(a^ma^n=a^{m+n}\), \(\frac{a^m}{a^n}=a^{m-n}\), \((a^m)^n=a^{mn}\), \(a^0=1\), \(a^{-n}=\frac1{a^n}\), \(a^{m/n}=(\sqrt[n]a)^m\). Sci. notation \(a\times10^k\), \(1\le a\lt10\).</td></tr>
+<tr><td>Sets</td><td>\(n(A\cup B)=n(A)+n(B)-n(A\cap B)\); De Morgan \((A\cup B)'=A'\cap B'\), \((A\cap B)'=A'\cup B'\); \(A\cup A'=U\); \(A\cap A'=\varnothing\).</td></tr>
+<tr><td>Expansion</td><td>\((a\pm b)^2=a^2\pm2ab+b^2\); \((a+b)(a-b)=a^2-b^2\); \((a+b)^3=a^3+3a^2b+3ab^2+b^3\).</td></tr>
+<tr><td>Factorising</td><td>Common factor → diff. of squares → trinomial (sum/product or split with sum \(b\), product \(ac\)) → group in pairs.</td></tr>
+<tr><td>Surds</td><td>\(\sqrt a\sqrt b=\sqrt{ab}\); conjugate product \(=a^2-b^2c\); rationalise by multiplying by the conjugate; \(a+b\sqrt k=c+d\sqrt k\Rightarrow a=c,b=d\).</td></tr>
+<tr><td>Pythagoras</td><td>\(c^2=a^2+b^2\); converse tests right angle; chord/tangent/semicircle right angles; box diagonal \(\sqrt{a^2+b^2+c^2}\).</td></tr>
+<tr><td>Coordinates</td><td>\(d=\sqrt{\Delta x^2+\Delta y^2}\); midpoint = averages; \(m=\frac{\Delta y}{\Delta x}\); parallel \(m_1=m_2\); perpendicular \(m_1m_2=-1\); \(y-b=m(x-a)\); distance to line \(\frac{|Ah+Bk+C|}{\sqrt{A^2+B^2}}\).</td></tr>
+</table></div>
+
+</section>
+
+<!-- ===================================================== TEST A ===================================================== -->
+<section class="panel" id="testA" hidden>
+<h2>Test A · Chapters 1–2 <span class="tag">Indices · Sets</span></h2>
+<p class="muted">13 questions. No calculator unless a question says so. Work on paper, then reveal the answer.</p>
+<div class="tools"><button data-act="open">Reveal all answers</button><button data-act="close">Hide all answers</button></div>
+<ol class="qs">
+
+<li>Simplify using the index laws, giving positive indices: \(\dfrac{(3a^2b)^3\times2ab^4}{6a^3b^2}\).
+<details><summary>Show answer</summary><div class="ans"><p>Numerator: \(27a^6b^3\times2ab^4=54a^7b^7\). Divide by \(6a^3b^2\): \(9a^{7-3}b^{7-2}\).</p><p><b>\(9a^4b^5\)</b></p></div></details></li>
+
+<li>Express \(\dfrac{8^{x+1}}{4^{2x-1}}\) in simplest form with a prime number base.
+<details><summary>Show answer</summary><div class="ans"><p>\(8^{x+1}=2^{3x+3}\), \(4^{2x-1}=2^{4x-2}\). Quotient: \(2^{3x+3-(4x-2)}\).</p><p><b>\(2^{5-x}\)</b></p></div></details></li>
+
+<li>Evaluate without a calculator:
+<ol class="sub"><li>\(27^{-2/3}\)</li><li>\(\left(\dfrac49\right)^{-3/2}\)</li><li>\(16^{3/4}+2^{-3}\)</li></ol>
+<details><summary>Show answer</summary><div class="ans">
+<p>(a) \(27^{-2/3}=\dfrac1{(3^3)^{2/3}}=\dfrac1{3^2}=\) <b>\(\dfrac19\)</b></p>
+<p>(b) \(\left(\dfrac94\right)^{3/2}=\left(\dfrac32\right)^3=\) <b>\(\dfrac{27}8\)</b></p>
+<p>(c) \(16^{3/4}=(2^4)^{3/4}=2^3=8\); \(2^{-3}=\frac18\). Total <b>\(\dfrac{65}8\)</b></p></div></details></li>
+
+<li>Write without brackets or negative indices: \(\left(\dfrac{2p^{-1}}{q^2}\right)^{-3}\).
+<details><summary>Show answer</summary><div class="ans"><p>Invert and cube: \(\left(\dfrac{q^2}{2p^{-1}}\right)^3=\left(\dfrac{pq^2}{2}\right)^3\).</p><p><b>\(\dfrac{p^3q^6}{8}\)</b></p></div></details></li>
+
+<li>Scientific notation.
+<ol class="sub"><li>Write \(0.0000472\) in scientific notation.</li>
+<li>Calculate \(\dfrac{(3.6\times10^{-4})\times(5\times10^{9})}{1.2\times10^{2}}\), giving your answer in scientific notation.</li>
+<li>Light travels at \(3\times10^8\) m/s. How long does it take light to travel \(1.5\times10^{11}\) m (Sun to Earth)? Answer in scientific notation.</li></ol>
+<details><summary>Show answer</summary><div class="ans">
+<p>(a) <b>\(4.72\times10^{-5}\)</b></p>
+<p>(b) Top: \(3.6\times5=18\), \(10^{-4+9}=10^5\) → \(18\times10^5\). Divide by \(1.2\times10^2\): \(15\times10^3=\) <b>\(1.5\times10^4\)</b></p>
+<p>(c) \(\dfrac{1.5\times10^{11}}{3\times10^8}=0.5\times10^3=\) <b>\(5\times10^2\) seconds</b> (500 s ≈ 8.3 min)</p></div></details></li>
+
+<li>Without a calculator, which is smaller: \(2^{60}\) or \(3^{40}\)?
+<details><summary>Show answer</summary><div class="ans"><p>Make equal indices: \(2^{60}=(2^3)^{20}=8^{20}\) and \(3^{40}=(3^2)^{20}=9^{20}\). Since \(8^{20}\lt9^{20}\):</p><p><b>\(2^{60}\) is smaller.</b></p></div></details></li>
+
+<li>True or false?
+<ol class="sub"><li>\(\sqrt{49}\in\mathbb Q\)</li><li>\(0.\overline3\in\mathbb Z\)</li><li>\(\mathbb Z^+\subset\mathbb N\)</li><li>\(\mathbb Q\subset\mathbb Z\)</li><li>\(\varnothing\subset\{1,2\}\)</li></ol>
+<details><summary>Show answer</summary><div class="ans"><p>(a) True (\(=7\)). (b) False (\(=\frac13\), not an integer). (c) True. (d) False (e.g. \(\frac12\in\mathbb Q\) but \(\notin\mathbb Z\)); in fact \(\mathbb Z\subset\mathbb Q\). (e) True: the empty set is a subset of every set.</p></div></details></li>
+
+<li>Show that \(0.\overline{27}=0.272727\ldots\) is a rational number.
+<details><summary>Show answer</summary><div class="ans"><p>Let \(x=0.272727\ldots\) Then \(100x=27.2727\ldots\) Subtract: \(99x=27\), so \(x=\dfrac{27}{99}=\dfrac3{11}\), which is a ratio of integers, so rational.</p></div></details></li>
+
+<li>Set notation.
+<ol class="sub"><li>List the elements of \(\{x\mid-2\le x\lt4,\ x\in\mathbb Z\}\) and find the number of elements.</li>
+<li>Describe how \(\{x\mid-1\lt x\le5,\ x\in\mathbb R\}\) looks on a number line.</li>
+<li>Write "all real numbers less than 2, or at least 7" in set-builder notation.</li></ol>
+<details><summary>Show answer</summary><div class="ans"><p>(a) \(\{-2,-1,0,1,2,3\}\), so 6 elements.</p><p>(b) Open circle at \(-1\), closed circle at \(5\), shaded line between them.</p><p>(c) \(\{x\mid x\lt2\ \text{or}\ x\ge7\}\)</p></div></details></li>
+
+<li>\(U=\{x\mid x\le15,\ x\in\mathbb Z^+\}\), \(A=\{\text{multiples of }3\}\), \(B=\{\text{factors of }24\}\). Find: (a) \(A\cap B\) (b) \(A\cup B\) (c) \(n(A')\) (d) \(n(B')\) (e) \(n((A\cap B)')\).
+<details><summary>Show answer</summary><div class="ans">
+<p>\(A=\{3,6,9,12,15\}\), \(B=\{1,2,3,4,6,8,12\}\).</p>
+<p>(a) \(\{3,6,12\}\)</p><p>(b) \(\{1,2,3,4,6,8,9,12,15\}\) (9 elements)</p>
+<p>(c) \(n(A')=15-5=10\)</p><p>(d) \(n(B')=15-7=8\)</p><p>(e) \(15-3=12\)</p></div></details></li>
+
+<li>In a class of 32 students, 20 play football, 15 play basketball and 5 play neither. How many play: (a) both sports (b) football only (c) basketball only?
+<details><summary>Show answer</summary><div class="ans"><p>At least one sport: \(32-5=27\). Both: \(20+15-27=\) <b>8</b>. Football only: \(20-8=\) <b>12</b>. Basketball only: \(15-8=\) <b>7</b>. Check: \(12+8+7+5=32\) ✓</p></div></details></li>
+
+<li>In a group of 60 people, 35 like tea (T), 30 like coffee (C) and 25 like juice (J). 15 like T and C, 12 like C and J, 10 like T and J, and 5 like all three. How many like (a) none of the drinks (b) exactly one drink?
+<details><summary>Show answer</summary><div class="ans">
+<p>Centre 5. T∩C only \(=10\), C∩J only \(=7\), T∩J only \(=5\). T only \(=35-5-10-5=15\); C only \(=30-5-10-7=8\); J only \(=25-5-7-5=8\).</p>
+<p>At least one: \(5+10+7+5+15+8+8=58\). (a) None \(=60-58=\) <b>2</b>. (b) Exactly one \(=15+8+8=\) <b>31</b>.</p></div></details></li>
+
+<li>Use the laws of the algebra of sets to show that \(A\cap(B\cup A')=A\cap B\).
+<details><summary>Show answer</summary><div class="ans">
+<p>\(A\cap(B\cup A')=(A\cap B)\cup(A\cap A')\) {distributive}<br>
+\(=(A\cap B)\cup\varnothing\) {complement}<br>
+\(=A\cap B\) {identity} ∎</p></div></details></li>
+</ol>
+</section>
+
+<!-- ===================================================== TEST B ===================================================== -->
+<section class="panel" id="testB" hidden>
+<h2>Test B · Chapters 3–4 <span class="tag">Expansion &amp; factorising · Surds</span></h2>
+<p class="muted">14 questions. Always check factorisations by expanding.</p>
+<div class="tools"><button data-act="open">Reveal all answers</button><button data-act="close">Hide all answers</button></div>
+<ol class="qs">
+
+<li>Expand and simplify: (a) \((3x-2)(2x+5)\) (b) \((2x-5y)^2\) (c) \((3a+4)(3a-4)\).
+<details><summary>Show answer</summary><div class="ans"><p>(a) \(6x^2+15x-4x-10=\) <b>\(6x^2+11x-10\)</b></p><p>(b) \(4x^2-20xy+25y^2\)</p><p>(c) Difference of squares: \(9a^2-16\)</p></div></details></li>
+
+<li>Expand and simplify \((x+2)(x-1)(x+3)\).
+<details><summary>Show answer</summary><div class="ans"><p>\((x+2)(x-1)=x^2+x-2\). Then \((x^2+x-2)(x+3)=x^3+3x^2+x^2+3x-2x-6\).</p><p><b>\(x^3+4x^2+x-6\)</b></p></div></details></li>
+
+<li>Use the binomial expansion of \((a+b)^3\) to expand \((2x-3)^3\).
+<details><summary>Show answer</summary><div class="ans"><p>\(a=2x,\ b=-3\): \((2x)^3+3(2x)^2(-3)+3(2x)(-3)^2+(-3)^3\)</p><p><b>\(8x^3-36x^2+54x-27\)</b></p></div></details></li>
+
+<li>How many terms are produced (before collecting like terms) when you expand \((a+b+c)(d+e)(f+g)\)?
+<details><summary>Show answer</summary><div class="ans"><p>\(3\times2\times2=\) <b>12</b> terms.</p></div></details></li>
+
+<li>Fully factorise: (a) \(6x^2-9x\) (b) \(25-4y^2\) (c) \(3x^2-48\) (d) \(x^2-10x+25\)
+<details><summary>Show answer</summary><div class="ans"><p>(a) \(3x(2x-3)\)</p><p>(b) \((5-2y)(5+2y)\)</p><p>(c) \(3(x^2-16)=3(x-4)(x+4)\)</p><p>(d) \((x-5)^2\)</p></div></details></li>
+
+<li>Fully factorise: (a) \(x^2+x-42\) (b) \(3x^2-12x-36\) (c) \(-x^2+5x+14\)
+<details><summary>Show answer</summary><div class="ans"><p>(a) sum 1, product \(-42\): \(7,-6\) → \((x+7)(x-6)\)</p><p>(b) \(3(x^2-4x-12)=3(x-6)(x+2)\)</p><p>(c) \(-(x^2-5x-14)=-(x-7)(x+2)\)</p></div></details></li>
+
+<li>Factorise by grouping in pairs: (a) \(2ab+6a+b+3\) (b) \(xy-2x+3y-6\)
+<details><summary>Show answer</summary><div class="ans"><p>(a) \(2a(b+3)+1(b+3)=(b+3)(2a+1)\)</p><p>(b) \(x(y-2)+3(y-2)=(y-2)(x+3)\)</p></div></details></li>
+
+<li>Factorise by splitting the middle term: (a) \(6x^2+11x+3\) (b) \(4x^2-4x-15\) (c) \(-6x^2+x+2\)
+<details><summary>Show answer</summary><div class="ans">
+<p>(a) \(ac=18\), sum 11 → \(9,2\): \(6x^2+9x+2x+3=3x(2x+3)+(2x+3)=\) <b>\((2x+3)(3x+1)\)</b></p>
+<p>(b) \(ac=-60\), sum \(-4\) → \(-10,6\): \(4x^2-10x+6x-15=2x(2x-5)+3(2x-5)=\) <b>\((2x-5)(2x+3)\)</b></p>
+<p>(c) \(-(6x^2-x-2)\); \(ac=-12\), sum \(-1\) → \(-4,3\): \(6x^2-4x+3x-2=(3x-2)(2x+1)\). Answer <b>\(-(3x-2)(2x+1)\)</b></p></div></details></li>
+
+<li>(a) Show that \((3x+5)^2-(2x-1)^2=5x^2+34x+24\). (b) Factorise it two ways: using the difference of two squares on the left side, and check it equals the trinomial.
+<details><summary>Show answer</summary><div class="ans">
+<p>(a) \(9x^2+30x+25-(4x^2-4x+1)=5x^2+34x+24\) ✓</p>
+<p>(b) \([(3x+5)-(2x-1)][(3x+5)+(2x-1)]=(x+6)(5x+4)\). Check: \(5x^2+4x+30x+24\) ✓</p></div></details></li>
+
+<li>Simplify: (a) \(\sqrt{72}\) (b) \(3\sqrt5\times2\sqrt{10}\) (c) \(2\sqrt{12}-\sqrt{27}+\sqrt3\) (d) \((2\sqrt3)^3\)
+<details><summary>Show answer</summary><div class="ans"><p>(a) \(\sqrt{36\times2}=6\sqrt2\)</p><p>(b) \(6\sqrt{50}=6\times5\sqrt2=30\sqrt2\)</p><p>(c) \(4\sqrt3-3\sqrt3+\sqrt3=2\sqrt3\)</p><p>(d) \(8\times3\sqrt3=24\sqrt3\)</p></div></details></li>
+
+<li>Expand and simplify: (a) \((3+\sqrt5)(2-\sqrt5)\) (b) \((\sqrt7-2)^2\) (c) \((4+3\sqrt2)(4-3\sqrt2)\)
+<details><summary>Show answer</summary><div class="ans"><p>(a) \(6-3\sqrt5+2\sqrt5-5=1-\sqrt5\)</p><p>(b) \(7-4\sqrt7+4=11-4\sqrt7\)</p><p>(c) \(16-18=-2\)</p></div></details></li>
+
+<li>Write with an integer denominator: (a) \(\dfrac{12}{\sqrt6}\) (b) \(\dfrac5{3-\sqrt2}\) (c) \(\dfrac{2+\sqrt3}{2-\sqrt3}\)
+<details><summary>Show answer</summary><div class="ans"><p>(a) \(\dfrac{12\sqrt6}{6}=2\sqrt6\)</p><p>(b) \(\dfrac{5(3+\sqrt2)}{9-2}=\dfrac{15+5\sqrt2}{7}\)</p><p>(c) \(\dfrac{(2+\sqrt3)^2}{4-3}=7+4\sqrt3\)</p></div></details></li>
+
+<li>Write \(\dfrac{6+\sqrt{72}}{3}\) in the form \(a+b\sqrt n\) with \(a,b\in\mathbb Q\), \(n\in\mathbb Z\).
+<details><summary>Show answer</summary><div class="ans"><p>\(\sqrt{72}=6\sqrt2\), so \(\dfrac{6+6\sqrt2}{3}=\) <b>\(2+2\sqrt2\)</b></p></div></details></li>
+
+<li>Find rational numbers \(x\) and \(y\) such that \((x+y\sqrt3)(2-\sqrt3)=5-\sqrt3\).
+<details><summary>Show answer</summary><div class="ans"><p>Expand: \(2x-x\sqrt3+2y\sqrt3-3y=(2x-3y)+(2y-x)\sqrt3\). By the theorem for equality of surds: \(2x-3y=5\) and \(2y-x=-1\). From the second, \(x=2y+1\); then \(4y+2-3y=5\Rightarrow y=3\), \(x=7\).</p><p><b>\(x=7,\ y=3\)</b>. Check: \((7+3\sqrt3)(2-\sqrt3)=14-9+(-7+6)\sqrt3=5-\sqrt3\) ✓</p></div></details></li>
+</ol>
+</section>
+
+<!-- ===================================================== TEST C ===================================================== -->
+<section class="panel" id="testC" hidden>
+<h2>Test C · Chapters 5–6 <span class="tag">Pythagoras · Coordinate geometry</span></h2>
+<p class="muted">16 questions. Sketch a diagram wherever you can.</p>
+<div class="tools"><button data-act="open">Reveal all answers</button><button data-act="close">Hide all answers</button></div>
+<ol class="qs">
+
+<li>A right-angled triangle has legs 6 cm and 12 cm. Find the hypotenuse in simplest radical form.
+<details><summary>Show answer</summary><div class="ans"><p>\(x^2=36+144=180\), \(x=\sqrt{180}=\) <b>\(6\sqrt5\) cm</b> (≈ 13.4 cm).</p></div></details></li>
+
+<li>Which of these triangles are right-angled? (a) sides 5, 6, \(\sqrt{61}\) (b) sides 7, 9, 12
+<details><summary>Show answer</summary><div class="ans"><p>(a) \(5^2+6^2=61=(\sqrt{61})^2\) → <b>right-angled</b> (right angle opposite \(\sqrt{61}\)).</p><p>(b) \(7^2+9^2=130\ne144\) → <b>not</b> right-angled.</p></div></details></li>
+
+<li>Find \(k\) so that these are Pythagorean triples: (a) \(\{20,k,29\}\) (b) \(\{9,k,k+1\}\)
+<details><summary>Show answer</summary><div class="ans"><p>(a) \(400+k^2=841\Rightarrow k^2=441\Rightarrow k=\) <b>21</b></p><p>(b) \(81+k^2=(k+1)^2=k^2+2k+1\Rightarrow 2k=80\Rightarrow k=\) <b>40</b> (triple \(\{9,40,41\}\))</p></div></details></li>
+
+<li>A rhombus has diagonals 10 cm and 24 cm. Find its side length and perimeter.
+<details><summary>Show answer</summary><div class="ans"><p>Diagonals bisect at right angles: legs 5 and 12. Side \(=\sqrt{25+144}=\) <b>13 cm</b>. Perimeter \(=4\times13=\) <b>52 cm</b>.</p></div></details></li>
+
+<li>An equilateral triangle has side 10 cm. Find its height and area.
+<details><summary>Show answer</summary><div class="ans"><p>The altitude bisects the base: \(h^2+5^2=10^2\Rightarrow h=\sqrt{75}=5\sqrt3\approx8.66\) cm.</p><p>Area \(=\frac12(10)(5\sqrt3)=\) <b>\(25\sqrt3\approx43.3\) cm²</b>.</p></div></details></li>
+
+<li>(a) A circle has radius 13 cm. How far from the centre is a chord of length 24 cm? (b) A tangent is drawn from a point 17 cm from the centre of a circle of radius 8 cm. Find the length of the tangent.
+<details><summary>Show answer</summary><div class="ans"><p>(a) Half-chord 12: \(d=\sqrt{13^2-12^2}=\sqrt{25}=\) <b>5 cm</b>.</p><p>(b) Tangent ⟂ radius: \(t=\sqrt{17^2-8^2}=\sqrt{225}=\) <b>15 cm</b>.</p></div></details></li>
+
+<li>Find the length of the longest rod that fits inside a rectangular box 3 m × 4 m × 12 m.
+<details><summary>Show answer</summary><div class="ans"><p>\(\sqrt{3^2+4^2+12^2}=\sqrt{169}=\) <b>13 m</b>.</p></div></details></li>
+
+<li>\(A(-2,5)\) and \(B(4,-3)\). Find (a) the distance \(AB\) (b) the midpoint of \([AB]\) (c) the gradient of \([AB]\).
+<details><summary>Show answer</summary><div class="ans"><p>(a) \(\sqrt{6^2+(-8)^2}=\sqrt{100}=\) <b>10</b></p><p>(b) \(\left(\frac{-2+4}2,\frac{5-3}2\right)=\) <b>\((1,1)\)</b></p><p>(c) \(\dfrac{-3-5}{4-(-2)}=\) <b>\(-\dfrac43\)</b></p></div></details></li>
+
+<li>\(M(1,4)\) is the midpoint of \([AB]\) and \(A\) is \((3,-2)\). Find \(B\).
+<details><summary>Show answer</summary><div class="ans"><p>\(\frac{3+b_1}2=1\Rightarrow b_1=-1\); \(\frac{-2+b_2}2=4\Rightarrow b_2=10\). <b>\(B(-1,10)\)</b>.</p></div></details></li>
+
+<li>(a) Find \(k\) if the line through \((2,k)\) and \((6,-1)\) has gradient \(-\frac12\). (b) Find \(k\) if \(A(-1,-2)\), \(B(2,4)\), \(C(4,k)\) are collinear.
+<details><summary>Show answer</summary><div class="ans"><p>(a) \(\dfrac{-1-k}{6-2}=-\dfrac12\Rightarrow-1-k=-2\Rightarrow k=\) <b>1</b></p><p>(b) Gradient \(AB=\dfrac{6}{3}=2\). Need \(\dfrac{k-4}{4-2}=2\Rightarrow k=\) <b>8</b>.</p></div></details></li>
+
+<li>Find the equation of the line:
+<ol class="sub"><li>with gradient \(-3\) through \((2,5)\), in gradient-intercept form</li>
+<li>through \((1,-2)\) and \((4,4)\), in general form</li>
+<li>parallel to \(3x-2y=6\) through \((4,1)\)</li>
+<li>perpendicular to \(3x-2y=6\) through \((4,1)\)</li></ol>
+<details><summary>Show answer</summary><div class="ans">
+<p>(a) \(y-5=-3(x-2)\Rightarrow\) <b>\(y=-3x+11\)</b></p>
+<p>(b) \(m=\frac{4+2}{4-1}=2\); \(y+2=2(x-1)\Rightarrow\) <b>\(2x-y=4\)</b></p>
+<p>(c) Same left side: \(3x-2y=3(4)-2(1)=\) <b>10</b>, i.e. \(3x-2y=10\)</p>
+<p>(d) Perpendicular gradient \(-\frac23\): \(2x+3y=2(4)+3(1)=\) <b>11</b>, i.e. \(2x+3y=11\)</p></div></details></li>
+
+<li>Find the equation of the perpendicular bisector of \([AB]\) where \(A(-1,2)\) and \(B(5,6)\).
+<details><summary>Show answer</summary><div class="ans"><p>Midpoint \((2,4)\). Gradient \(AB=\frac{4}{6}=\frac23\), so the perpendicular gradient is \(-\frac32\). Equation: \(3x+2y=3(2)+2(4)=\) <b>14</b>.</p><p>Check: \((0,7)\) is on it, and \(\sqrt{1+25}=\sqrt{25+1}\) → equidistant ✓.</p></div></details></li>
+
+<li>A circle has centre \((1,2)\). Find the equation of the tangent at the point of contact \((4,6)\).
+<details><summary>Show answer</summary><div class="ans"><p>Radius gradient \(=\frac{6-2}{4-1}=\frac43\). Tangent gradient \(=-\frac34\). Equation: \(3x+4y=3(4)+4(6)=\) <b>36</b>.</p></div></details></li>
+
+<li>Find the shortest distance from \(P(3,4)\) to the line \(3x+4y=5\).
+<details><summary>Show answer</summary><div class="ans"><p>Gradient of line \(-\frac34\), so \([NP]\) has gradient \(\frac43\): \(4x-3y=4(3)-3(4)=0\). Solve with \(3x+4y=5\): from \(y=\frac43x\): \(3x+\frac{16}3x=5\Rightarrow x=\frac35,\ y=\frac45\). \(N(0.6,0.8)\). \(NP=\sqrt{2.4^2+3.2^2}=\sqrt{16}=\) <b>4</b>.</p><p>Shortcut: \(\dfrac{|3(3)+4(4)-5|}{\sqrt{9+16}}=\dfrac{20}5=4\) ✓</p></div></details></li>
+
+<li>Triangle with \(A(1,1)\), \(B(4,5)\), \(C(8,2)\). Classify it as equilateral, isosceles or scalene, and decide if it is right-angled.
+<details><summary>Show answer</summary><div class="ans"><p>\(AB=\sqrt{9+16}=5\); \(BC=\sqrt{16+9}=5\); \(AC=\sqrt{49+1}=\sqrt{50}\).</p><p>\(AB=BC\) → <b>isosceles</b>. \(AB^2+BC^2=25+25=50=AC^2\) → <b>right-angled at \(B\)</b>.</p></div></details></li>
+
+<li>\(A(2,-1,3)\) and \(B(-2,3,5)\). Find the distance \(AB\) and the midpoint of \([AB]\).
+<details><summary>Show answer</summary><div class="ans"><p>\(AB=\sqrt{(-4)^2+4^2+2^2}=\sqrt{36}=\) <b>6</b>. Midpoint \(=\left(\frac{2-2}2,\frac{-1+3}2,\frac{3+5}2\right)=\) <b>\((0,1,4)\)</b>.</p></div></details></li>
+</ol>
+</section>
+
+<!-- ===================================================== TEST D ===================================================== -->
+<section class="panel" id="testD" hidden>
+<h2>Test D · Mixed final review <span class="tag">All six chapters</span></h2>
+<p class="muted">12 questions, two per chapter in order. Time yourself: about 40 minutes.</p>
+<div class="tools"><button data-act="open">Reveal all answers</button><button data-act="close">Hide all answers</button></div>
+<ol class="qs">
+
+<li><b>(Ch 1)</b> Simplify \(\dfrac{(2x^{-2}y)^3}{4x^{-5}y^2}\), writing with positive indices.
+<details><summary>Show answer</summary><div class="ans"><p>\(\dfrac{8x^{-6}y^3}{4x^{-5}y^2}=2x^{-6-(-5)}y^{3-2}=2x^{-1}y=\) <b>\(\dfrac{2y}{x}\)</b></p></div></details></li>
+
+<li><b>(Ch 1)</b> (a) Evaluate \(\left(\dfrac18\right)^{-2/3}\). (b) A bacterium has mass \(2.5\times10^{-12}\) g. How many such bacteria have a total mass of \(5\times10^{-3}\) g?
+<details><summary>Show answer</summary><div class="ans"><p>(a) \(8^{2/3}=(2^3)^{2/3}=2^2=\) <b>4</b></p><p>(b) \(\dfrac{5\times10^{-3}}{2.5\times10^{-12}}=2\times10^{9}\) bacteria.</p></div></details></li>
+
+<li><b>(Ch 2)</b> In a school year of 120 students, 70 study French, 55 study Spanish and 20 study neither. How many study both? How many study only French?
+<details><summary>Show answer</summary><div class="ans"><p>At least one language: \(120-20=100\). Both \(=70+55-100=\) <b>25</b>. French only \(=70-25=\) <b>45</b>.</p></div></details></li>
+
+<li><b>(Ch 2)</b> Use the laws of the algebra of sets to show that \((A\cup B)'\cap A=\varnothing\).
+<details><summary>Show answer</summary><div class="ans"><p>\((A\cup B)'\cap A=(A'\cap B')\cap A\) {De Morgan}<br>\(=(A\cap A')\cap B'\) {commutative, associative}<br>\(=\varnothing\cap B'=\varnothing\) {complement, domination} ∎</p></div></details></li>
+
+<li><b>(Ch 3)</b> Expand and simplify \((x+3)^2-(x-2)(x+4)\).
+<details><summary>Show answer</summary><div class="ans"><p>\(x^2+6x+9-(x^2+2x-8)=\) <b>\(4x+17\)</b></p></div></details></li>
+
+<li><b>(Ch 3)</b> Fully factorise \(12x^2+x-6\).
+<details><summary>Show answer</summary><div class="ans"><p>\(ac=-72\), sum 1 → \(9,-8\): \(12x^2+9x-8x-6=3x(4x+3)-2(4x+3)=\) <b>\((4x+3)(3x-2)\)</b></p></div></details></li>
+
+<li><b>(Ch 4)</b> Expand and simplify \((3-\sqrt2)^2-(1+\sqrt2)(1-\sqrt2)\).
+<details><summary>Show answer</summary><div class="ans"><p>\((9-6\sqrt2+2)-(1-2)=11-6\sqrt2+1=\) <b>\(12-6\sqrt2\)</b></p></div></details></li>
+
+<li><b>(Ch 4)</b> Write \(\dfrac{1+\sqrt3}{1-\sqrt3}\) with an integer denominator, in simplest form.
+<details><summary>Show answer</summary><div class="ans"><p>\(\dfrac{(1+\sqrt3)^2}{1-3}=\dfrac{4+2\sqrt3}{-2}=\) <b>\(-2-\sqrt3\)</b></p></div></details></li>
+
+<li><b>(Ch 5)</b> A rectangle has a diagonal of 13 cm and one side of 5 cm. Find its perimeter.
+<details><summary>Show answer</summary><div class="ans"><p>Other side \(=\sqrt{13^2-5^2}=12\). Perimeter \(=2(5+12)=\) <b>34 cm</b>.</p></div></details></li>
+
+<li><b>(Ch 5)</b> A square-based pyramid has base side 8 m and height 6 m, with the apex directly above the centre. Find the length of a slant edge.
+<details><summary>Show answer</summary><div class="ans"><p>Half the base diagonal: \(\frac12\sqrt{8^2+8^2}=4\sqrt2\), so \(x^2=32\). Slant edge \(s^2=32+6^2=68\), \(s=\sqrt{68}=\) <b>\(2\sqrt{17}\approx8.25\) m</b>.</p></div></details></li>
+
+<li><b>(Ch 6)</b> A line passes through \(A(-3,4)\) and \(B(1,-4)\). (a) Find its equation in general form. (b) Does \(C(5,-12)\) lie on it?
+<details><summary>Show answer</summary><div class="ans"><p>(a) \(m=\dfrac{-4-4}{1+3}=-2\). General form for gradient \(-2\): \(2x+y=C\); \(C=2(-3)+4=-2\). Line: <b>\(2x+y=-2\)</b>.</p><p>(b) \(2(5)+(-12)=-2\) ✓ → <b>yes</b>, \(C\) lies on the line (so \(A,B,C\) are collinear).</p></div></details></li>
+
+<li><b>(Ch 6)</b> Find the distance between the parallel lines \(2x-y=3\) and \(2x-y=-7\).
+<details><summary>Show answer</summary><div class="ans"><p>Pick a point on the second line: \((0,7)\). Distance to \(2x-y-3=0\): \(\dfrac{|2(0)-7-3|}{\sqrt{4+1}}=\dfrac{10}{\sqrt5}=\) <b>\(2\sqrt5\approx4.47\)</b>.</p></div></details></li>
+</ol>
+</section>
+
+</main>
+
+<script>
+(function(){
+  var tabs = document.querySelectorAll('nav.tabs button[role="tab"]');
+  var panels = document.querySelectorAll('section.panel');
+  function show(id){
+    panels.forEach(function(p){ p.hidden = (p.id !== id); });
+    tabs.forEach(function(t){ t.setAttribute('aria-selected', t.dataset.target === id ? 'true' : 'false'); });
+    window.scrollTo(0,0);
+  }
+  tabs.forEach(function(t){ t.addEventListener('click', function(){ show(t.dataset.target); }); });
+  document.querySelectorAll('.tools button').forEach(function(b){
+    b.addEventListener('click', function(){
+      var sec = b.closest('section');
+      var open = b.dataset.act === 'open';
+      sec.querySelectorAll('details').forEach(function(d){ d.open = open; });
+    });
+  });
+})();
+</script>
+</body>
+</html>
